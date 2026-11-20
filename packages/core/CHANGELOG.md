@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Export `PathsFinder.allPaths` to find test files with `KNAPSACK_PRO_TEST_FILE_PATTERN` (or a default pattern) and `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN`, ignoring `node_modules`, for test runners that do not resolve test files on their own
+- Export `normalizePaths` to assign 0 seconds to the scheduled paths that were not recorded
+- Add `glob` and `minimatch` dependencies
+
 ## 11.2.0
 
 - Set `KNAPSACK_PRO_SINGLE_BATCH=true` to get only one batch of tests per node

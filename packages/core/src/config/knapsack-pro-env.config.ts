@@ -226,6 +226,14 @@ export class KnapsackProEnvConfig {
     return process.env.KNAPSACK_PRO_TEST_FILE_LIST_SOURCE_FILE;
   }
 
+  public static get testFilePattern(): string | void {
+    return process.env.KNAPSACK_PRO_TEST_FILE_PATTERN;
+  }
+
+  public static get testFileExcludePattern(): string | void {
+    return process.env.KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN;
+  }
+
   public static get maskedUserSeat(): string | void {
     const envValue = this.envFor('KNAPSACK_PRO_USER_SEAT', 'userSeat');
     if (envValue) {
