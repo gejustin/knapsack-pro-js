@@ -57,6 +57,7 @@ npm run build
 # Need a second install to run:
 #   - npx @knapsack-pro/jest
 #   - npx @knapsack-pro/vitest
+#   - npx @knapsack-pro/node
 #   - npx @knapsack-pro/cypress
 #   - npx @knapsack-pro/playwright
 # See https://github.com/npm/cli/issues/4591#issuecomment-1111557730
@@ -105,9 +106,9 @@ npm adduser # sign in to npm
 npm publish
 ```
 
-#### Jest, Vitest, Cypress, Playwright
+#### Jest, Vitest, Node, Cypress, Playwright
 
-Replace PACKAGE with `jest`, `vitest`, `cypress`, or `playwright`. If core changed you'll need to update all of them.
+Replace PACKAGE with `jest`, `vitest`, `node`, `cypress`, or `playwright`. If core changed you'll need to update all of them.
 
 ```bash
 # merge PR and pull or edit code
@@ -144,10 +145,12 @@ Read the READMEs inside the nested `packages/`:
 - [core](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/core)
 - [jest](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/jest)
 - [vitest](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/vitest)
+- [node](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/node)
 - [cypress](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/cypress)
 - [playwright](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/playwright)
 - [jest-example-test-suite](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/jest-example-test-suite)
 - [vitest-example-test-suite](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/vitest-example-test-suite)
+- [node-example-test-suite](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/node-example-test-suite)
 - [cypress-example-test-suite](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/cypress-example-test-suite)
 - [playwright-example-test-suite](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/playwright-example-test-suite)
 - [create-react-app-example](https://github.com/KnapsackPro/knapsack-pro-js/tree/main/packages/create-react-app-example)

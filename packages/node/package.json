@@ -1,0 +1,51 @@
+{
+  "name": "@knapsack-pro/node",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Knapsack Pro Node splits Node.js test runner (node:test) tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnapsackPro/knapsack-pro-js.git",
+    "directory": "packages/node"
+  },
+  "keywords": [
+    "knapsack",
+    "knapsack pro",
+    "node",
+    "node:test",
+    "test suite parallelisation",
+    "parallelisation",
+    "testing",
+    "test",
+    "automation",
+    "integration",
+    "runner",
+    "CI"
+  ],
+  "author": "Knapsack Pro <support@knapsackpro.com> (https://knapsackpro.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf lib && tsc && chmod u+x lib/knapsack-node.js",
+    "test": "vitest --run",
+    "test:watch": "vitest"
+  },
+  "files": [
+    "lib"
+  ],
+  "bin": {
+    "knapsack-pro-node": "lib/knapsack-node.js"
+  },
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@knapsack-pro/core": "^11.2.0",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^26.4.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}

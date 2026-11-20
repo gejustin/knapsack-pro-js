@@ -1,0 +1,27 @@
+{
+  "name": "@knapsack-pro/node-example-test-suite",
+  "version": "1.0.0",
+  "description": "Node.js test runner example test suite with @knapsack-pro/node",
+  "type": "module",
+  "main": "index.js",
+  "devDependencies": {
+    "@knapsack-pro/node": "../node"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:ks": "bin/knapsack_pro_node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnapsackPro/knapsack-pro-js.git"
+  },
+  "keywords": [
+    "node:test"
+  ],
+  "author": "KnapsackPro.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KnapsackPro/knapsack-pro-js/issues"
+  },
+  "homepage": "https://github.com/KnapsackPro/knapsack-pro-js"
+}

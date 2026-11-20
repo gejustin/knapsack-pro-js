@@ -29,6 +29,8 @@ jobs:
             - packages/jest-example-test-suite/node_modules
             - packages/vitest/node_modules
             - packages/vitest-example-test-suite/node_modules
+            - packages/node/node_modules
+            - packages/node-example-test-suite/node_modules
             - packages/cypress/node_modules
             - packages/cypress-example-test-suite/node_modules
             - ~/.npm
@@ -39,6 +41,7 @@ jobs:
       - run: npm run test:jest:unit
       - run: npm run test:cypress:unit
       - run: npm run test:vitest:unit
+      - run: npm run test:node:unit
       - run: npm run test:playwright:unit
       - run:
           working_directory: ./packages/jest-example-test-suite
@@ -50,6 +53,12 @@ jobs:
           command: |
             export KNAPSACK_PRO_ENDPOINT=https://api-staging.knapsackpro.com
             npx @knapsack-pro/vitest
+      - run:
+          working_directory: ./packages/node-example-test-suite
+          command: |
+            export KNAPSACK_PRO_ENDPOINT=https://api-staging.knapsackpro.com
+            export KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN="**/excludedTest.test.js"
+            npx @knapsack-pro/node
       - run:
           working_directory: ./packages/cypress-example-test-suite
           command: |
