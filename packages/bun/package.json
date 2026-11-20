@@ -1,0 +1,52 @@
+{
+  "name": "@knapsack-pro/bun",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Knapsack Pro Bun splits Bun test runner (bun test) tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnapsackPro/knapsack-pro-js.git",
+    "directory": "packages/bun"
+  },
+  "keywords": [
+    "knapsack",
+    "knapsack pro",
+    "bun",
+    "bun test",
+    "test suite parallelisation",
+    "parallelisation",
+    "testing",
+    "test",
+    "automation",
+    "integration",
+    "runner",
+    "CI"
+  ],
+  "author": "Knapsack Pro <support@knapsackpro.com> (https://knapsackpro.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf lib && tsc && chmod u+x lib/knapsack-bun.js",
+    "test": "vitest --run",
+    "test:watch": "vitest"
+  },
+  "files": [
+    "lib"
+  ],
+  "bin": {
+    "knapsack-pro-bun": "lib/knapsack-bun.js"
+  },
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@knapsack-pro/core": "^11.2.0",
+    "fast-xml-parser": "^5.12.1",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^26.4.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}

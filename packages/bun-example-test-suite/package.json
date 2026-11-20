@@ -1,0 +1,27 @@
+{
+  "name": "@knapsack-pro/bun-example-test-suite",
+  "version": "1.0.0",
+  "description": "Bun test runner example test suite with @knapsack-pro/bun",
+  "type": "module",
+  "main": "index.js",
+  "devDependencies": {
+    "@knapsack-pro/bun": "../bun"
+  },
+  "scripts": {
+    "test": "bun test",
+    "test:ks": "bin/knapsack_pro_bun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnapsackPro/knapsack-pro-js.git"
+  },
+  "keywords": [
+    "bun test"
+  ],
+  "author": "KnapsackPro.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KnapsackPro/knapsack-pro-js/issues"
+  },
+  "homepage": "https://github.com/KnapsackPro/knapsack-pro-js"
+}

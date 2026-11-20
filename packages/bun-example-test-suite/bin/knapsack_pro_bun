@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ENDPOINT=https://api-staging.knapsackpro.com
+# ENDPOINT=http://api.knapsackpro.localhost:3000
+
+KNAPSACK_PRO_ENDPOINT=$ENDPOINT \
+  KNAPSACK_PRO_TEST_SUITE_TOKEN_BUN=${KNAPSACK_PRO_TEST_SUITE_TOKEN_BUN:?Set KNAPSACK_PRO_TEST_SUITE_TOKEN_BUN to the token of a Knapsack Pro test suite} \
+  KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN="**/excludedTest.test.js" \
+  KNAPSACK_PRO_LOG_LEVEL=debug \
+  KNAPSACK_PRO_TEST_QUEUE_ID=${3:-$(openssl rand -base64 32)} \
+  KNAPSACK_PRO_CI_NODE_TOTAL=${2:-1} \
+  KNAPSACK_PRO_CI_NODE_INDEX=${1:-0} \
+  npx @knapsack-pro/bun #--timeout=2000

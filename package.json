@@ -11,6 +11,8 @@
     "packages/vitest-example-test-suite",
     "packages/node",
     "packages/node-example-test-suite",
+    "packages/bun",
+    "packages/bun-example-test-suite",
     "packages/playwright",
     "packages/playwright-example-test-suite"
   ],
@@ -24,12 +26,14 @@
     "test:vitest": "npm run build -w packages/core && npm run build -w packages/vitest && npm run test:ks -w packages/vitest-example-test-suite",
     "test:node:unit": "npm run test -w packages/node",
     "test:node": "npm run build -w packages/core && npm run build -w packages/node && npm run test:ks -w packages/node-example-test-suite",
+    "test:bun:unit": "npm run test -w packages/bun",
+    "test:bun": "npm run build -w packages/core && npm run build -w packages/bun && npm run test:ks -w packages/bun-example-test-suite",
     "test:cypress:unit": "npm run test -w packages/cypress",
     "test:cypress": "npm run build -w packages/core && npm run build -w packages/cypress && npm run test:ks -w packages/cypress-example-test-suite",
     "test:playwright:unit": "npm run test -w packages/playwright",
     "test:playwright": "npm run build -w packages/core && npm run build -w packages/playwright && npm run test:ks -w packages/playwright-example-test-suite",
     "test:cra": "cd packages/create-react-app-example && npm install && npm run test:ks",
-    "test:examples": "npm run test:jest && npm run test:vitest && npm run test:node && npm run test:cypress && npm run test:playwright && npm run test:cra"
+    "test:examples": "npm run test:jest && npm run test:vitest && npm run test:node && npm run test:bun && npm run test:cypress && npm run test:playwright && npm run test:cra"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

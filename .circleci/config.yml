@@ -31,6 +31,8 @@ jobs:
             - packages/vitest-example-test-suite/node_modules
             - packages/node/node_modules
             - packages/node-example-test-suite/node_modules
+            - packages/bun/node_modules
+            - packages/bun-example-test-suite/node_modules
             - packages/cypress/node_modules
             - packages/cypress-example-test-suite/node_modules
             - ~/.npm
@@ -42,6 +44,8 @@ jobs:
       - run: npm run test:cypress:unit
       - run: npm run test:vitest:unit
       - run: npm run test:node:unit
+      - run: npm install --global bun@1.4.4
+      - run: npm run test:bun:unit
       - run: npm run test:playwright:unit
       - run:
           working_directory: ./packages/jest-example-test-suite
@@ -59,6 +63,12 @@ jobs:
             export KNAPSACK_PRO_ENDPOINT=https://api-staging.knapsackpro.com
             export KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN="**/excludedTest.test.js"
             npx @knapsack-pro/node
+      - run:
+          working_directory: ./packages/bun-example-test-suite
+          command: |
+            export KNAPSACK_PRO_ENDPOINT=https://api-staging.knapsackpro.com
+            export KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN="**/excludedTest.test.js"
+            npx @knapsack-pro/bun
       - run:
           working_directory: ./packages/cypress-example-test-suite
           command: |
